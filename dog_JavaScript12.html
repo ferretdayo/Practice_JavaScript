@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>JavaScript</title>
+</head>
+<body>
+	<script>
+
+		if(document.referrer.length != 0){
+			ref = document.referrer;
+			if(ref.indexOf("http://www.google.co.jp")==0){
+				document.write("Google検索からのお越しですね☆　Thanks");
+			}else if(ref == "http://www.red.oit-net.jp/tatsuya/java/index.htm"){
+				document.write("イヌでも分かるJS講座の目次からいらっしゃいませ☆");
+			}else{
+				document.write(fer+"からお越しやす〜");
+			}
+		}else{
+			document.write("直接このHPにアクセスThanks");
+		}
+
+	</script>
+</body>
+</html>
