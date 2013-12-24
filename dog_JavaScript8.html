@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+
+	<script>
+		flg = 0;
+		function func(){
+			if(flg==0){
+				document.myform.message.value = "いらっしゃいませ";
+				flg = 1;
+			}else{
+				document.myform.message.value = "";
+				flg = 0;
+			}
+		}
+
+	</script>
+	
+	<form name="myform">
+		<input type="text" size="20" name="message" style="border-style:none;background-color:#FFEFD5;">
+	</form>
+	
+	<script>
+		setInterval("func()",500);
+	</script>
+
+</body>
+</html>
