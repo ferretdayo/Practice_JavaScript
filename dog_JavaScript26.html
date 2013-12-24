@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+
+	<script>
+
+		function myGo(){
+			mySelect = document.myForm.myMenu.selectedIndex;
+			location.href = document.myForm.myMenu.options[mySelect].value;
+		}
+		
+	</script>
+
+	<form name="myForm">
+		<select name="myMenu" onchange="myGo()">
+			<option value="aiueo.htm">あいうえお
+			<option value="aio.htm">あい
+			<option value="ueo.htm">うえお
+			<option value="o.htm">いうえお
+			<option value="iueo.htm">あいお
+		</select>
+	</form>
+	
+</body>
+</html>
