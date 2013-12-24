@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>JavaScript</title>
+</head>
+<body>
+	<script>
+		function set(){
+			document.myform.math1.value = Math.floor(Math.random()*9)+1;
+			document.myform.math2.value = Math.floor(Math.random()*9)+1;
+			document.myform.ans.value = "";
+		}
+		function check(){
+			var ans_math1 = eval(document.myform.math1.value);
+			var ans_math2 = eval(document.myform.math2.value);
+			var ans = eval(document.myform.ans.value);
+			var result = ans_math1*ans_math2;
+			if(result == ans){
+				alert("正解!");
+			}else{
+				alert("不正解です☆ 答えは、"+result+"です");
+			}
+			set();
+		}
+	</script>
+
+	<form name="myform">
+		<input type="text" size="2" name="math1">×
+		<input type="text" size="2" name="math2">＝
+		<input type="text" size="2" name="ans">
+		<input type="button" value="解答" onclick="check()">
+	</form>
+
+	<script>
+		set();
+	</script>
+</body>
+</html>
