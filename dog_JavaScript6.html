@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+	<script>
+		cnt = 1;
+		function myfunc(){
+			document.myform.myformSec.value = cnt+"秒";
+			document.myform.myformYen.value = ((Math.floor(cnt/180)*10)+10)+"円";
+			cnt++;
+		}
+	</script>
+	<form name="myform">
+		こんなサイトに
+		<input type="text" size="10" name="myformSec">
+		も付き合ってくれてありがとう。
+		<br>
+		<input type="text" size="10" name="myformYen">
+		も使わせてごめんなさい
+		<br>
+	</form>
+	
+	<script>
+		setInterval("myfunc()",1000);
+	</script>
+	
+</body>
+</html>
