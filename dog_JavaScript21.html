@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+
+	<script>
+	
+		tbl = new Array(
+				"Aさんのホームページ",
+				"Bさんのホームページ",
+				"Cさんのホームページ",
+				"Dさんのホームページ",
+				"Eさんのホームページ",
+				"Fさんのホームページ"
+			);
+		
+		color = new Array("#DB7093","#D8BFD8");
+	
+	</script>
+
+	<table border="1">
+		<script>
+			for(var i=0;i<tbl.length;i++){
+				document.write("<tr>");
+				document.write("<td bgcolor='"+color[i%2]+"'>");	//背景色をセット
+				document.write(tbl[i]);
+				document.write("</td>");
+				document.write("</tr>");
+			}
+		</script>
+	</table>
+
+</body>
+</html>
