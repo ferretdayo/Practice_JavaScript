@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+
+	<script>
+		myStatusTbl = new Array(4);                    // ハイパーリンク行の数
+		myStatusTbl[0] = "難易度：★☆☆☆☆☆☆☆☆☆"; // Step.1
+		myStatusTbl[1] = "難易度：★★☆☆☆☆☆☆☆☆"; // Step.2
+		myStatusTbl[2] = "難易度：★★★☆☆☆☆☆☆☆"; // Step.3
+		myStatusTbl[3] = "難易度：★★★★☆☆☆☆☆☆"; // Step.4
+
+		function myIn( myTblNo ) {                     // カーソルが乗った
+		 window.status = myStatusTbl[myTblNo];         // ステータスバーに表示
+		 return true;                                  // 戻り値を true とする
+		}
+
+		function myOut() {                             // カーソルが離れた
+		 window.status = "";                           // ステータスバーから消去
+		 return true;                                  // 戻り値を true とする
+		}
+	</script>
+
+	<a href="step1.htm"    onmouseover="return myIn(0)" onmouseout="return myOut()">Step.1 いきなりJavaScriptを使ってみましょう<br></a>
+	<a href="aisatu.htm"   onmouseover="return myIn(1)" onmouseout="return myOut()">Step.2 あいさつ文を表示してみましょう<br></a>
+	<a href="getdate.htm"  onmouseover="return myIn(2)" onmouseout="return myOut()">Step.3 現在の日付と時間を表示してみましょう<br></a>
+	<a href="function.htm" onmouseover="return myIn(3)" onmouseout="return myOut()"> Step.4 関数化してHTMLソースリストを整理しましょう<br></a>
+
+	
+</body>
+</html>
