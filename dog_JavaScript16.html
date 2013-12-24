@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+
+	<script>
+	
+		function Enter(){
+			var password = prompt("パスワードを入力してください","");
+			if(password == String.fromCharCode(112,97,115,115,49)){
+				location.href = String.fromCharCode(115,101,99,114,101,116)+".htm";
+			}else{
+				alert("パスワードが違います");
+			}
+		}
+			
+	</script>
+	
+	</form>
+		googleサイトへ→
+		<input type="button" value="検索サイト" onclick="Enter()">
+	</form>
+
+</body>
+</html>
