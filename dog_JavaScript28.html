@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+
+	<script>
+
+		var myColor = new Array(
+						"000000","101010","202020","303030",
+						"404040","505050","606060","707070",
+						"808080","909090","A0A0A0","B0B0B0",
+						"C0C0C0","D0D0D0","E0E0E0","FFFFFF"
+						);
+		var myCnt = 0;
+		
+		function myFade(){
+			if(myCnt != 16){
+				document.bgColor = "#"+myColor[myCnt];
+				var myTime = (myCnt == 0 || myCnt == 15) ? 1000 : 50;
+				myCnt++;
+				setTimeout("myFade()",myTime);
+			}else{
+				location.href = "fade.htm";
+			}
+		}
+		
+	</script>
+
+	<br><br><br><br><br><br><br>
+	<p align="center">
+	<font color="#FFFFFF" size="5">
+	<strong>ふぇれっとのホームページ</strong>
+	</font><br><br>
+	<font color="#FFFFFF" size="6">
+	<strong>イヌでもわかるJavaScript講座</strong>
+	</font><br><br>
+	<font color="#000000" size="6">
+	<strong>Presented by ferret</strong>
+	</font></br>
+	</p>
+	
+	<script>
+		myFade();
+	</script>
+	
+</body>
+</html>
