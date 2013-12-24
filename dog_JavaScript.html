@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>JavaScript</title>
+
+</head>
+<body>
+	<script>
+	
+		Tbl = new Array("日","月","火","水","木","金","土");
+		myD = new Date();
+		
+		my_y = myD.getFullYear();
+		my_Month = myD.getMonth()+1;
+		my_Date = myD.getDate();
+		my_Day = myD.getDay();
+		my_h = myD.getHours();
+		my_m = myD.getMinutes();
+		my_s = myD.getSeconds();
+
+		myMess1 = my_y+"年"+my_Month+"月"+my_Date+"日";
+		myMess2 = Tbl[my_Day]+"曜日";
+		myMess3 = my_h+"時"+my_m+"分"+my_s+"秒";
+		myMess = myMess1+" "+myMess2+" "+myMess3;
+		document.write(myMess);
+		
+	</script>
+</body>
+</html>
